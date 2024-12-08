@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./signup.css">
+    <title>Регистрация</title>
+</head>
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="./img/backgraund.mp4" type="video/mp4">
+  </video>
+  
+    <main class="content">
+        <section>
+            <div class="sign-up">
+                <div class="sign-up-one">
+                    <div class="img">
+                        <img src="./img/sign-up.png" alt="Регистрация">
+                    </div>
+                    <div class="sign-up-main">
+                        <p>Имя: </p> 
+                        <input type="text" id="name">
+                        <p>Е-мейл: </p>
+                        <input type="text" id="email">
+                        <p>Пароль: </p>
+                        <input type="password" id="password">
+                    </div>
+                    <div class="btn">
+                        <button onclick="signUp()">Зарегистрироваться</button>
+                    </div>
+                    <div class="signin">
+                      <p>У вас есть аккаунт? <a href="./signinru.html">Войти</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+      function signUp() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+    
+        fetch('http://localhost:3000/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ name, email, password })
+        }).then(response => response.text())
+        .then(data => {
+          console.log(data); // Показать ответ от сервера в консоли
+          alert(data);
+        })
+        .catch(error => {
+          console.error('Ошибка:', error);
+          alert('Произошла ошибка. Попробуйте еще раз.');
+        });
+      }
+    </script>    
+</body>
+</html>

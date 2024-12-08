@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./signin.css">
+    <title>Войти</title>
+</head>
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="./img/backgraund.mp4" type="video/mp4">
+  </video>
+  
+    <main class="content">
+        <section>
+            <div class="sign-in">
+                <div class="sign-in-one">
+                    <div class="img">
+                        <img src="./img/sign-up.png" alt="регистрация">
+                    </div>
+                    <div class="sign-in-main">
+                        <p>Е-мейл: </p>
+                        <input type="text" id="email">
+                        <p>Пароль: </p>
+                        <input type="password" id="password">
+                    </div>
+                    <div class="btn">
+                        <button onclick="signin()">Войти</button>
+                    </div>
+                    <div class="signup">
+                        <p>У вас нет аккаунта? <a href="./signupru.html">Зарегистрироваться</a></p>
+                      </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+      function signin() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+    
+        fetch('http://localhost:3000/signin', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password }),
+        })
+          .then((response) => {
+            if (response.ok) {
+              return response.text();
+            } else {
+              throw new Error('Invalid email or password.');
+            }
+          })
+          .then((data) => {
+            alert(data);
+            window.location.href = '../index.html';
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+            alert(error.message);
+          });
+      }
+    </script>       
+</body>
+</html>

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Syne:wght@400..800&display=swap');
+*{
+    font-family: "Syne", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  .content{
+    position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  }
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+p{
+    font-size: 1.3vw;
+    color: #A6A001;
+    margin-bottom: 0.5vw ;
+}
+.sign-in-main{
+    text-align: start;
+    width: 21vw;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+}
+.sign-in{
+    width: 30vw;
+    background-color: #1E1E1E;
+    border: 2px solid #1E1E1E;
+    border-radius: 10px;
+}
+.sign-in-main input{
+    width: 15vw;
+    margin-bottom: 0.5vw;
+}
+.show-password{
+    width: 15vw;
+    margin-top: 0.8vw;
+    display: flex;
+    gap: 5px;
+}
+.show-password input{
+    margin-left: 1vw;
+    margin-bottom: 0.5vw;
+    width: 1vw;
+}
+.btn button{
+    background-color: #A6A001;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    padding: 0.8vw 1.5vw;
+    margin-top: 1vw;
+}
+.sign-in-one{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30vw;
+}
+.img img{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    width: 10vw;
+}
+.signup{
+    margin-bottom: 2vw;
+    margin-top: 1vw;
+}
+a{
+    text-decoration:none;
+    color: #f1f1f1;
+}
+a:hover{
+    text-decoration: underline;
+}
