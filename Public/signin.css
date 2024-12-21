@@ -26,7 +26,7 @@ section{
     height: 100vh;
 }
 p{
-    font-size: 1.3vw;
+    font-size: 20px;
     color: #A6A001;
     margin-bottom: 0.5vw ;
 }
@@ -56,6 +56,10 @@ p{
     margin-left: 1vw;
     margin-bottom: 0.5vw;
     width: 1vw;
+}
+.btn{
+    display: flex;
+    justify-content: center;
 }
 .btn button{
     background-color: #A6A001;

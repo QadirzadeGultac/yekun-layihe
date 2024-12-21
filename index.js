@@ -15,34 +15,44 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// API endpoint
+// Qeydiyyat API-si
 app.post('/signup', (req, res) => {
   const { name, email, password } = req.body;
 
   console.log('Received data:', { name, email, password }); // Göndərilən məlumatları yoxlayın
 
-  const query = 'INSERT INTO UsersNew (Name, Email, Password) VALUES (?, ?, ?)';
-  
-  connection.query(query, [name, email, password], (err, results) => {
+  // Əvvəlcə e-mail-in mövcud olub-olmadığını yoxlayırıq
+  const checkQuery = 'SELECT * FROM UsersNew WHERE Email = ?';
+
+  connection.query(checkQuery, [email], (err, results) => {
     if (err) {
-      console.error('Error inserting data:', err.message); // Xətanın dəqiq mesajı
-      res.status(500).send('Error inserting data: ' + err.message);
+      console.error('Error checking email:', err.message);
+      res.status(500).send('Error checking email: ' + err.message);
       return;
     }
-    console.log('Inserted data:', results);  // Məlumatların uğurla daxil olmasını yoxlayın
-    res.status(200).send('Registration successful!');
+
+    if (results.length > 0) {
+      // Əgər e-mail mövcuddursa, istifadəçiyə xəbərdarlıq göndəririk
+      res.status(400).send('E-mail already exists. Please use another one.');
+    } else {
+      // Əgər e-mail mövcud deyilsə, məlumatı əlavə edirik
+      const insertQuery = 'INSERT INTO UsersNew (Name, Email, Password) VALUES (?, ?, ?)';
+
+      connection.query(insertQuery, [name, email, password], (err, results) => {
+        if (err) {
+          console.error('Error inserting data:', err.message);
+          res.status(500).send('Error inserting data: ' + err.message);
+          return;
+        }
+
+        console.log('Inserted data:', results);
+        res.status(200).send('Registration successful!');
+      });
+    }
   });
-  
 });
 
-
-
-// Serveri işə sal
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
-
-
+// Giriş API-si
 app.post('/signin', (req, res) => {
   const { email, password } = req.body;
 
@@ -66,4 +76,9 @@ app.post('/signin', (req, res) => {
       res.status(400).send('Invalid email or password');
     }
   });
+});
+
+// Serveri işə sal
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
 });

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./signup.css">
+  <link rel="icon" href="./img/socialmedia.svg">
   <title>Qeydiyyat</title>
 </head>
 
@@ -24,7 +25,7 @@
             <p>Ad: </p>
             <input type="text" id="name">
             <p>E-poçt: </p>
-            <input type="text" id="email">
+            <input type="email" id="email">
             <p>Şifrə: </p>
             <input type="password" id="password">
           </div>
@@ -44,22 +45,25 @@
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
 
-      console.log({ name, email, password });  // Konsola məlumatları yazdırın
-
       fetch('http://localhost:3000/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({ name, email, password })
-      }).then(response => response.text())
+      }).then(response => {
+        if (!response.ok) {
+          return response.text().then(error => { throw new Error(error); });
+        }
+        return response.text();
+      })
         .then(data => {
-          console.log(data); // Serverdən gələn cavabı konsolda göstərin
-          alert(data);
+          console.log(data);
+          window.location.href = './signin.html';
         })
         .catch(error => {
           console.error('Error:', error);
-          alert('An error occurred. Please try again.');
+          alert(error.message);
         });
     }
 

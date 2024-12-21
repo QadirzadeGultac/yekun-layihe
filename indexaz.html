@@ -13,13 +13,13 @@
     <header>
         <img class="logo" src="./imgs/headerlogo.svg" alt="loqo">
         <ul>
-            <li><a href=#home>Əsas səhifə</a></li>
-            <li><a href=#pages>Səhifələr</a></li>
-            <li><a href=#portfolio>Portfolio</a></li>
-            <li><a href=#blogs>Bloqlar</a></li>
-            <li><a href=#contact>Əlaqə</a></li>
+            <li class="menu"><a class="yellow" href=#home>Əsas səhifə</a></li>
+            <li class="menu"><a href=#pages>Səhifələr</a></li>
+            <li class="menu"><a href=#portfolio>Portfolio</a></li>
+            <li class="menu"><a href=#blogs>Bloqlar</a></li>
+            <li class="menu"><a href=#contact>Əlaqə</a></li>
         </ul>
-        <a class="signin" href="./Public/signinaz.html"><img src="./imgs/headersignout.svg" alt="giris"></a>
+        <a class="signin" href="./Public/signinaz.html"><img src="./imgs/daxilolun.svg" alt="giris"></a>
     </header>
     <main>
         <section class="home" id="home">
@@ -31,14 +31,29 @@
                     <p>Salam,</p>
                     <h1>Mən <span style="color: #A6A001;">Aleksandr</span> <br> UX/UI Dizaynerəm</h1>
                     <p>Design Club rəqəmsal agentlikdir, e-ticarət üzrə ixtisaslaşıb. Biz, uyğun ticari arxitekturaya malik miqyaslanabilən, yüksək keyfiyyətli veb mağazalar qururuq.</p>
-                    <img src="./imgs/aboutme.svg" alt="haqqımda">
+                    <div class="aboutme">
+                        <img src="./imgs/aboutme.svg" alt="aboutme">
+                    </div>
                 </div>
             </div>
-            <div class="pages" id="pages">
+            <div class="pages">
                 <img src="./imgs/line.svg" alt="Xətt">
             </div>
         </section>
-        <section class="third">
+        <section class="aboutme-text dis-none">
+            <div class="aboutme-text-div">
+                <h1 class="aboutme-head">Mən <span style="color: #A6A001;">Aleksandr</span></h1>
+                <p class="aboutme-p">
+                    Mən, peşəkar UX/UI dizayneri olaraq istifadəçi təcrübəsi və interfeys dizaynında ixtisaslaşmış bir mütəxəssisəm. Yaradıcılıq və texniki bacarıqlarımı birləşdirərək, mükəmməl istifadəçi təcrübəsi təmin edən dizaynlar hazırlayıram. Əsas məqsədim, müasir və funksional interfeyslər vasitəsilə istifadəçilərin ehtiyaclarını ödəmək və onların rəqəmsal məhsullarla qarşılıqlı əlaqəsini asanlaşdırmaqdır.
+                    Dizayn karyerama başlayarkən, istifadəçi tələblərini dərindən öyrənməyin və bu tələbləri texniki həllərə çevirməyin vacibliyini dərk etdim. Dizayn prosesində həmişə istifadəçi yönümlü yanaşma tətbiq edirəm. Bunun üçün istifadəçi tədqiqatı, prototipləşdirmə və iterasiya kimi metodlardan faydalanıram. Həmçinin rənglər, tipoqrafiya və vizual balansı düzgün istifadə edərək estetik cəhətdən göz oxşayan interfeyslər yaradıram.
+                    Son illərdə müxtəlif sahələr üzrə layihələrdə iştirak etmişəm. E-ticarət platformaları, mobil tətbiqlər və veb saytların dizaynında mənim imzam var. Yalnız gözəl görünən dizaynlar hazırlamıram, həm də istifadəçi davranışını təhlil edərək onların funksional və rahat olmasını təmin edirəm.
+                    Komanda işinə xüsusi əhəmiyyət verirəm və developerlər, layihə menecerləri ilə yaxından əməkdaşlıq edirəm. Güclü kommunikasiya bacarıqlarım və dizayn prinsiplərini texniki dillə ifadə etmə qabiliyyətim layihələrin uğurla tamamlanmasını təmin edir.
+                    Müasir texnologiyalara olan marağım daim yenilikçi həllər axtarmağa təşviq edir. Figma, Sketch və Adobe XD kimi alətlərdə ustalıqla işləyirəm, həmçinin animasiya və mikro-interfeyslər üçün After Effects-dən istifadə edirəm.
+                    Boş vaxtlarımda sənət və yaradıcılıq mövzusunda ilham toplamaq üçün sərgilərə qatılır və dizayn bloqları vasitəsilə biliklərimi artırıram. Məqsədim, öz sahəmdə lider olmaq və istifadəçilərə daha mükəmməl təcrübələr təqdim etməkdir.
+                </p>
+            </div>
+        </section>
+        <section  id="pages" class="third">
             <div class="third-one">
                 <img src="./imgs/ui-ux.svg" alt="ui-ux">
                 <h3>UI/UX Dizayn</h3>
@@ -59,8 +74,8 @@
         <section class="portfolio" id="portfolio">
             <img class="portofolio-img" src="./imgs/portfolio.svg" alt="portfolio">
             <div class="portfolio-one">
-                <ul>
-                    <li>Hamısı</li>
+                <ul class="portfolio-ul">
+                    <li class="portfolio-li">Hamısı</li>
                     <li>Veb saytlar</li>
                     <li>Mobil tətbiqlər</li>
                     <li>Sosial media brendinqi</li>
@@ -75,30 +90,48 @@
             </div>
             <div class="five-one">
                 <div class="arrow-one">
-                    <img src="./imgs/arrow.svg" alt="ox">
+                    <a
+                        href="https://www.lookfantastic.com/c/health-beauty/make-up/?srsltid=AfmBOooXBlVNKEPmLSEWQ_wFlUUGfLxVF-SWAHp5BOjAwDJv3rKxGQu_"><img
+                            src="./imgs/arrow.svg" alt="ox"></a>
                 </div>
                 <div>
-                    <h2>Vebsayt Dizaynı</h2>
+                    <a
+                        href="https://www.lookfantastic.com/c/health-beauty/make-up/?srsltid=AfmBOooXBlVNKEPmLSEWQ_wFlUUGfLxVF-SWAHp5BOjAwDJv3rKxGQu_">
+                        <h2>Vebsayt Dizaynı</h2>
+                    </a>
                     <p>Biz, e-ticarət markalarına rəqəmsal marketinq dünyasında dəyişən mühitdə ən yaxşı kreativ və fərdi ödənişli media strategiyaları təklif edirik.</p>
                 </div>
             </div>
             <div class="five-two">
-                <h2>UX/UI - Qrafik Dizayn</h2>
+                <a
+                    href="https://andersenlab.com/services/design-studio?utm_id=20660068999&matchtype=b&utm_medium=cpc&utm_source=google&utm_term=ui%20ux%20design%20services&utm_campaign=skag-all&utm_content=176571948388-715105048741-c&hsa_acc=7814422459&hsa_cam=20660068999&hsa_grp=176571948388&hsa_ad=715105048741&hsa_src=g&hsa_tgt=kwd-295410969342&hsa_kw=ui%20ux%20design%20services&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiAyJS7BhBiEiwAyS9uNSKuaNkaxM-hQ1kDocTtGjUH7E732zPGmVmqt69JgiV16IkaKjoWHxoCRcwQAvD_BwE">
+                    <h2>UX/UI - Qrafik Dizayn</h2>
+                </a>
             </div>
             <div class="five-tree">
-                <h2>Veb İnkişaf</h2>
+                <a href="https://site.pro/az/AI-Website-Builder/">
+                    <h2>Veb İnkişaf</h2>
+                </a>
             </div>
             <div class="five-four">
                 <div class="arrow-two">
-                    <img src="./imgs/arrow.svg" alt="ox">
+                    <a href="https://www.trendyol.com/">
+                        <img src="./imgs/arrow.svg" alt="ox">
+                    </a>
                 </div>
-                <h2>eousva - Məhsul Brendinqi</h2>
+                <a href="https://www.trendyol.com/">
+                    <h2>eousva - Məhsul Brendinqi</h2>
+                </a>
             </div>
             <div class="five-five">
-                <h2>Sosial Media</h2>
+                <a href="https://www.threads.net/">
+                    <h2>Sosial Media</h2>
+                </a>
             </div>
             <div class="five-six">
-                <h2>Məhsul - Dizayn</h2>
+                <a href="https://danizgudrat.github.io/Restaurant-Web-Site/">
+                    <h2>Məhsul - Dizayn</h2>
+                </a>
             </div>
         </section>
         <section class="six">
@@ -150,7 +183,8 @@
         </section>
     </main>
     <footer>
-        <div class="footer-main" id="contact">
+        <section id="contact">
+        <div class="footer-main">
             <div class="footer-one">
                 <img src="./imgs/headerlogo.svg" alt="loqo">
                 <p>Müasir identikaların arxetipləri detallarla yenidən təcəssüm olunur.</p>
@@ -194,20 +228,12 @@
         <div class="information">
             <p>Copyright © 2024 MYFOLIO. All Rights Reserved. </p>
         </div>
+    </section>
     </footer>
-    <script>
-        function changeLanguage(selectElement) {
-            const language = selectElement.value;
-            if (language === 'az') {
-                window.location.href = './indexaz.html';
-            }
-            else if (language === 'ru') {
-                window.location.href = './indexru.html';
-            } else if (language === 'en') {
-                window.location.href = './index.html';
-            }
-        }
-    </script>
+    <div id="scrollUp" class="main-arrow">
+        <a href=#home><img src="./imgs/right.png" alt="right"></a>
+    </div>
+    <script src="./app.js"></script>
 </body>
 
 </html>

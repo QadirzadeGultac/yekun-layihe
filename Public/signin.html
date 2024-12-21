@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./signin.css">
+  <link rel="icon" type="image/x-icon" href="./img/socialmedia.svg">
   <title>Sign in</title>
 </head>
 
@@ -20,15 +21,17 @@
           <div class="img">
             <img src="./img/sign-up.png" alt="sign-up">
           </div>
+          <form>
           <div class="sign-in-main">
             <p>E-mail: </p>
-            <input type="text" id="email">
+            <input type="email" id="email">
             <p>Password: </p>
             <input type="password" id="password">
           </div>
           <div class="btn">
             <button onclick="signin()">Sign in</button>
           </div>
+        </form>
           <div class="signup">
             <p>You don't have an account? <a href="./signup.html">Sign up</a></p>
           </div>
@@ -50,18 +53,17 @@
       })
         .then((response) => {
           if (response.ok) {
-            return response.text(); // Serverdən gələn cavab
+            return response.text();
           } else {
             throw new Error('Invalid email or password.');
           }
         })
         .then((data) => {
-          alert(data); // Uğurlu girişdən sonra mesaj
-          window.location.href = '../index.html'; // Giriş uğurlu olduqda ana səhifəyə yönləndir
+          window.location.href = '../index.html';
         })
         .catch((error) => {
           console.error('Error:', error);
-          alert(error.message); // Xətanı istifadəçiyə bildirin
+          alert(error.message);
         });
     }
   </script>

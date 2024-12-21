@@ -5,21 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./img/socialmedia.svg">
+    <link rel="icon" href="./imgs/socialmedia.svg">
     <title>My Folio</title>
 </head>
 
 <body>
     <header>
         <img class="logo" src="./imgs/headerlogo.svg" alt="logo">
+        <div class="header-ul">
         <ul>
-            <li><a href=#home>Home</a></li>
-            <li><a href=#pages>Pages</a></li>
-            <li><a href=#portfolio>Portfolio</a></li>
-            <li><a href=#blogs>Blogs</a></li>
-            <li><a href=#contact>Contact</a></li>
+            <li class="menu"><a class="yellow" href=#home>Home</a></li>
+            <li class="menu"><a href=#pages>Pages</a></li>
+            <li class="menu"><a href=#portfolio>Portfolio</a></li>
+            <li class="menu"><a href=#blogs>Blogs</a></li>
+            <li class="menu"><a href=#contact>Contact</a></li>
         </ul>
-        <a class="signin" href="./Public/signin.html"><img src="./imgs/headersignout.svg" alt="signout"></a>
+    </div>
+        <img class="burger" src="./imgs/burger-bar.png" alt="burger-bar">
+        <a class="signin" href="./Public/signin.html"><img src="./imgs/signin.svg" alt="signout"></a>
     </header>
     <main>
         <section class="home" id="home">
@@ -33,14 +36,44 @@
                     <p>Design Club is a digital agency specialized in ecommerce. We build scalable, high-end web shops
                         with
                         composable commerce architecture.</p>
-                    <img src="./imgs/aboutme.svg" alt="anoutme">
+                    <div class="aboutme">
+                        <img src="./imgs/aboutme.svg" alt="aboutme">
+                    </div>
                 </div>
             </div>
-            <div class="pages" id="pages">
+            <div class="pages">
                 <img src="./imgs/line.svg" alt="Line">
             </div>
         </section>
-        <section class="third">
+        <section class="aboutme-text dis-none">
+            <div class="aboutme-text-div">
+                <h1 class="aboutme-head">I'M <span style="color: #A6A001;"> Alexander </span></h1>
+                <p class="aboutme-p">
+                    I am a professional UX/UI designer specializing in user experience and interface design. By
+                    combining creativity and technical skills, I create designs that deliver exceptional user
+                    experiences. My main goal is to meet users’ needs through modern and functional interfaces,
+                    simplifying their interaction with digital products.
+                    When I started my design career, I understood the importance of deeply analyzing user requirements
+                    and turning them into technical solutions. I always apply a user-centered approach during the design
+                    process. For this, I utilize methods like user research, prototyping, and iteration. I also
+                    carefully balance colors, typography, and visual harmony to create aesthetically pleasing
+                    interfaces.
+                    In recent years, I have worked on projects across various fields. My portfolio includes e-commerce
+                    platforms, mobile applications, and websites. I don’t just create visually appealing designs but
+                    also analyze user behavior to ensure functionality and ease of use.
+                    I value teamwork and closely collaborate with developers and project managers. My strong
+                    communication skills and ability to express design principles in technical terms ensure the
+                    successful completion of projects.
+                    My interest in modern technologies constantly motivates me to seek innovative solutions. I am
+                    proficient in tools such as Figma, Sketch, and Adobe XD, and I also use After Effects for animations
+                    and micro-interactions.
+                    In my free time, I gather inspiration by attending art exhibitions and enhancing my knowledge
+                    through design blogs. My ultimate goal is to become a leader in my field and deliver even better
+                    experiences to users.
+                </p>
+            </div>
+        </section>
+        <section id="pages" class="third">
             <div class="third-one">
                 <img src="./imgs/ui-ux.svg" alt="ui-ux">
                 <h3>UI/UX Design</h3>
@@ -64,8 +97,9 @@
         <section class="portfolio" id="portfolio">
             <img class="portofolio-img" src="./imgs/portfolio.svg" alt="portfolio">
             <div class="portfolio-one">
-                <ul>
-                    <li>All</li>
+                <div class="portfolio-ul-div">
+                <ul class="portfolio-ul">
+                    <li class="portfolio-li">All</li>
                     <li>Websites</li>
                     <li>Mobile apps</li>
                     <li>Social media Branding</li>
@@ -73,39 +107,59 @@
                     <li>SEO</li>
                 </ul>
             </div>
+                <img class="burger" src="./imgs/burger-bar.png" alt="">
+            </div>
         </section>
         <section class="five">
             <div class="five-img">
                 <img src="./imgs/projects.svg" alt="projects">
             </div>
+            <div>
+            <div class="portfolio-one-group">
             <div class="five-one">
-                <div class="arrow-one">
-                    <img src="./imgs/arrow.svg" alt="arrow">
-                </div>
                 <div>
-                    <h2>Website Designing</h2>
+                    <a
+                        href="https://www.lookfantastic.com/c/health-beauty/make-up/?srsltid=AfmBOooXBlVNKEPmLSEWQ_wFlUUGfLxVF-SWAHp5BOjAwDJv3rKxGQu_">
+                        <h2>Website Designing</h2>
+                    </a>
+    
                     <p>We help e-commerce brands navigate the ever changing landscape of digital marketing with
                         best-in-class creative, personalized paid media strategies.</p>
                 </div>
             </div>
             <div class="five-two">
-                <h2>UXUI - Graphic Designing</h2>
+                <a
+                    href="https://andersenlab.com/services/design-studio?utm_id=20660068999&matchtype=b&utm_medium=cpc&utm_source=google&utm_term=ui%20ux%20design%20services&utm_campaign=skag-all&utm_content=176571948388-715105048741-c&hsa_acc=7814422459&hsa_cam=20660068999&hsa_grp=176571948388&hsa_ad=715105048741&hsa_src=g&hsa_tgt=kwd-295410969342&hsa_kw=ui%20ux%20design%20services&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiAyJS7BhBiEiwAyS9uNSKuaNkaxM-hQ1kDocTtGjUH7E732zPGmVmqt69JgiV16IkaKjoWHxoCRcwQAvD_BwE">
+                    <h2>UXUI - Graphic Designing</h2>
+                </a>
             </div>
+        </div>
+        <div class="portfolio-two-group">
             <div class="five-tree">
-                <h2>Web Development</h2>
+                <a href="https://site.pro/az/AI-Website-Builder/">
+                    <h2>Web Development</h2>
+                </a>
             </div>
             <div class="five-four">
-                <div class="arrow-two">
-                    <img src="./imgs/arrow.svg" alt="arrow">
-                </div>
-                <h2>eousva - Product Branding</h2>
+               
+                <a href="https://www.trendyol.com/">
+                    <h2>eousva - Product Branding</h2>
+                </a>
             </div>
+        </div>
+        <div class="portfolio-tree-group">
             <div class="five-five">
-                <h2>Social Media</h2>
+                <a href="https://www.threads.net/">
+                    <h2>Social Media</h2>
+                </a>
             </div>
             <div class="five-six">
-                <h2>Product - Design</h2>
+                <a href="https://danizgudrat.github.io/Restaurant-Web-Site/">
+                    <h2>Product - Design</h2>
+                </a>
             </div>
+        </div>
+    </div>
         </section>
         <section class="six">
             <div class="six-one">
@@ -159,64 +213,40 @@
         </section>
     </main>
     <footer>
-        <div class="footer-main" id="contact">
-            <div class="footer-one">
-                <img src="./imgs/headerlogo.svg" alt="logo">
-                <p>Archetypes of the MODERN. identity are reinvented through details.</p>
-                <div class="phone">
-                    <img src="./imgs/phone.svg" alt="phone">
-                    <p>+994 77 323 82 00</p>
+        <section id="contact">
+            <div class="footer-main">
+                <div class="footer-one">
+                    <img src="./imgs/headerlogo.svg" alt="logo">
+                    <p>Archetypes of the MODERN. identity are reinvented through details.</p>
+                    <div class="phone">
+                        <img src="./imgs/phone.svg" alt="phone">
+                        <p>+994 77 323 82 00</p>
+                    </div>
+                    <div class="e-mail">
+                        <img src="./imgs/e-mail.svg" alt="e-mail">
+                        <p>qadirzadegultac@gmail.com</p>
+                    </div>
                 </div>
-                <div class="e-mail">
-                    <img src="./imgs/e-mail.svg" alt="e-mail">
-                    <p>qadirzadegultac@gmail.com</p>
+                <div>
+                    <h3>Language</h3>
+                    <select name="language" id="language" onchange="changeLanguage(this)">
+                        <option value="en"> En </option>
+                        <option value="ru"> Ru </option>
+                        <option value="az"> Az </option>
+                    </select>
+                    <hr color="#3E3E3E">
                 </div>
             </div>
-            <div class="footer-two">
-                <ul>
-                    <li>Pages</li>
-                    <li>Home</li>
-                    <li>Order Now</li>
-                    <li>About Me</li>
-                    <li>Blogs</li>
-                </ul>
+            <hr color="#3E3E3E">
+            <div class="information">
+                <p>Copyright © 2024 MYFOLIO. All Rights Reserved. </p>
             </div>
-            <div class="footer-tree">
-                <ul>
-                    <li>Services</li>
-                    <li>Graphic Design</li>
-                    <li>UXUI Design</li>
-                    <li>Social Media</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Language</h3>
-                <select name="language" id="language" onchange="changeLanguage(this)">
-                    <option value="en"> En </option>
-                    <option value="ru"> Ru </option>
-                    <option value="az"> Az </option>
-                </select>
-                <hr color="#3E3E3E">
-            </div>
-        </div>
-        <hr color="#3E3E3E">
-        <div class="information">
-            <p>Copyright © 2024 MYFOLIO. All Rights Reserved. </p>
-        </div>
+        </section>
     </footer>
-    <script>
-        function changeLanguage(selectElement) {
-            const language = selectElement.value;
-            if (language === 'az') {
-                window.location.href = './indexaz.html';
-            }
-            else if (language === 'ru') {
-                window.location.href = './indexru.html';
-            } else if (language === 'en') {
-                window.location.href = './index.html';
-            }
-        }
-    </script>
+    <div id="scrollUp" class="main-arrow">
+        <a href=#home><img src="./imgs/right.png" alt="right"></a>
+    </div>
+    <script src="./app.js"></script>
 </body>
 
 </html>

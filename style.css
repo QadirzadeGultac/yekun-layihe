@@ -10,12 +10,14 @@ html {
 }
 body{
     background-color: #000;
+    position: relative;
 }
 h1,h2,h3,h4,h5,h6,p{
     color: #fff;
 }
 header{
-    width: 100%;
+    position: fixed;
+    width: 100vw;
     height: 10vh;
     background-color: #1E1E1E;
     display: flex;
@@ -26,32 +28,33 @@ header{
     padding: 0.5vw;
 }
 .signin{
-    margin-top: 0.5vw;
+    display: flex;
+    align-items: center;
 }
 .signin img{
-    width: 7vw;
     padding: 0.5vw;
+    width: 5.5vw;
+}
+.header-ul{
+    display: flex;
+    align-items: center;
 }
 header ul{
     display: flex;
-    align-items: center;
     list-style-type: none;
 }
 header li a{
+    font-size: 1.5vw;
     margin-left: 5vw ;
     color: #fff;
 }
 a{
     text-decoration:none;
 }
-header li:first-child a{
-    color: #A6A001;
-}
-header li a:hover{
+.yellow{
     color: #A6A001;
 }
 main{
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,6 +66,7 @@ main{
     justify-content: center;
 }
 .home{
+    margin-top: 10vh;
     display: flex;
     flex-direction: column;
 }
@@ -144,7 +148,7 @@ main{
     justify-content: center;
     align-items: center;
 }
-.portfolio ul{
+.portfolio-ul{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,7 +166,7 @@ main{
     border-radius: 10px;
     
 }
-.portfolio li:first-child{
+.portfolio-li{
     color: #1E1E1E;
     padding-left: 1vw;
     padding-right: 1vw;
@@ -182,30 +186,58 @@ main{
     height: 70px;
     margin-bottom: 3vw;
     border-radius: 10px;
-}
-.five{
-    margin-right: 8vw;
-    display: grid;
-    grid-template-columns: 1fr 3fr 3fr 3fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 1vw;
-    grid-template-areas:
-    "five-img five-one five-one five-two"
-    "five-img five-tree five-four five-four"
-    "five-img five-five five-five five-six";
+}   
 
+.five {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 10vw;
 }
-.five-one{
+.five-img{
+    display: flex;
+    justify-content: center;
+}
+.five-img img{
+    width: 8vw;
+}
+.portfolio-one-group,
+.portfolio-two-group,
+.portfolio-tree-group {
+    margin-bottom: 0.8vw;
+    gap: 0.8vw;
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    text-decoration: none;
+}
+
+.five-one, .five-four, .five-five{
+    width: 50vw;
+    height: 72vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    grid-area: five-one;
-    background-image: url(imgs/website-designing.svg);
+    justify-content: end;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+.five-two, .five-tree, .five-six {
+    width: 20vw;
+    height: 72vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     border-radius: 20px;
 }
 
-.five h2{
+.five h2 {
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -214,98 +246,44 @@ main{
     width: 15vw;
     color: #fff;
 }
-.five-four h2{
-    width: 25vw;
-}
-.five-one h2{
-    width: 20vw;
-}
-.five p{
-    display: flex;
-    flex-direction: column;
-    align-content: start;
+
+.five p {
     color: #EBEBEB;
     margin-left: 1.5vw;
     margin-bottom: 1.5vw;
     width: 32vw;
 }
+
+
+.five-one{
+    background-image: url(imgs/website-designing.svg);
+}
+
 .five-two{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    grid-area: five-two;
     background-image: url(imgs/uxui_graphic_designing.svg);
-    background-repeat: no-repeat;
-    border-radius: 20px;
 }
 .five-tree{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    grid-area: five-tree;
     background-image: url(imgs/web_development.svg);
-    background-repeat: no-repeat;
-    border-radius: 20px;
 }
 .five-four{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    grid-area: five-four;
     background-image: url(imgs/eousva.svg);
-    background-repeat: no-repeat;
-    border-radius: 20px;
 }
 .five-five{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    width: 700px;
-    height: 500px;
-    grid-area: five-five;
     background-image: url(imgs/social_media2.svg);
-    background-repeat: no-repeat;
-    border-radius: 20px;
 }
 .five-six{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    grid-area: five-six;
     background-image: url(imgs/product.svg);
-    background-repeat: no-repeat;
-    border-radius: 20px;
 }
-.five-img{
-    grid-area: five-img;
-}
-.arrow-one img{
-    width: 3.5vw;
-}
-.arrow-two img{
-    width: 3.5vw;
-}
-.five-one-one{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-}
-.five-img{
-    display: flex;
-    align-items: center;
-}
-.five-img img{
-    width: 5vw;
-}
-.arrow-one{
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    margin-top: 1vw;
-    margin-right: 1vw;
-}
-.arrow-two img{
-    margin-left: 1.5vw;
+/* Media queries */
+@media screen and (max-width: 900px) {
+    .five-one, .five-two, .five-tree, .five-four, .five-five, .five-six {
+        width: 100%;
+        height: auto;
+    }
+    .portfolio-one-group, .portfolio-two-group, .portfolio-two-group{
+        display: flex;
+        flex-direction: column;
+    }
 }
 .six-one img{
     margin-top: 4vw;
@@ -450,7 +428,7 @@ footer{
     border: none;
     width: 10vw;
     font-size: 15px;
-    height: 2vh;
+    height: 4vh;
 }
 #language:focus{
     outline: none;
@@ -461,4 +439,63 @@ footer{
     margin-top: 1.5vw;
     margin-bottom: 1.5vw;
     font-size: 0.8vw;
+}
+
+.main-arrow img{
+    width: 4vw;
+}
+.main-arrow{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    height: 80px;
+    width: 80px;
+}
+.dis-none{
+    display: none;
+}
+.burger{
+    display: none;
+}
+.aboutme-p{
+    text-align: center;
+    font-size: 20px;
+    width: 70vw;
+    line-height: 1.5;
+    margin-bottom: 2vw;
+}
+.aboutme-head{
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 2vw;
+    margin-top: 1vw;
+}
+.aboutme-text-div{
+    border-radius: 20px;
+    margin-top: 5vw;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    background-color: #1E1E1E;
+    width: 75vw;
+    padding-left: 6vw;
+    margin-bottom: 5vw;
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .burger{
+        display: block;
+        width: 100px;
+    }
+    .portfolio-ul-div{
+        display: none;
+    }
+    .header-ul{
+        display: none;
+    }
+    .footer-main{
+        display: flex;
+        flex-direction: column;
+        margin-left: 15vw;
+    }
+    
 }
