@@ -12,6 +12,7 @@
 <body>
     <header>
         <img class="logo" src="./imgs/headerlogo.svg" alt="loqo">
+        <div class="header-ul">
         <ul>
             <li class="menu"><a class="yellow" href=#home>Əsas səhifə</a></li>
             <li class="menu"><a href=#pages>Səhifələr</a></li>
@@ -19,7 +20,15 @@
             <li class="menu"><a href=#blogs>Bloqlar</a></li>
             <li class="menu"><a href=#contact>Əlaqə</a></li>
         </ul>
+        </div>
+        <img class="burger" src="./imgs/burger-bar.png" alt="burger-bar">
         <a class="signin" href="./Public/signinaz.html"><img src="./imgs/daxilolun.svg" alt="giris"></a>
+        <div class="signout-div">
+            <div id="welcomeMessage"></div>
+           <div id="signout">
+               <button class="signout-btn">Çıxış</button>
+           </div>
+       </div>
     </header>
     <main>
         <section class="home" id="home">
@@ -88,13 +97,10 @@
             <div class="five-img">
                 <img src="./imgs/projects.svg" alt="layihələr">
             </div>
-            <div class="five-one">
-                <div class="arrow-one">
-                    <a
-                        href="https://www.lookfantastic.com/c/health-beauty/make-up/?srsltid=AfmBOooXBlVNKEPmLSEWQ_wFlUUGfLxVF-SWAHp5BOjAwDJv3rKxGQu_"><img
-                            src="./imgs/arrow.svg" alt="ox"></a>
-                </div>
-                <div>
+            <div>
+            <div class="portfolio-one-group">
+                <div class="five-one">
+                    <div>
                     <a
                         href="https://www.lookfantastic.com/c/health-beauty/make-up/?srsltid=AfmBOooXBlVNKEPmLSEWQ_wFlUUGfLxVF-SWAHp5BOjAwDJv3rKxGQu_">
                         <h2>Vebsayt Dizaynı</h2>
@@ -108,22 +114,21 @@
                     <h2>UX/UI - Qrafik Dizayn</h2>
                 </a>
             </div>
-            <div class="five-tree">
+            </div>
+            <div class="portfolio-two-group">
+                <div class="five-tree">
                 <a href="https://site.pro/az/AI-Website-Builder/">
                     <h2>Veb İnkişaf</h2>
                 </a>
             </div>
             <div class="five-four">
-                <div class="arrow-two">
-                    <a href="https://www.trendyol.com/">
-                        <img src="./imgs/arrow.svg" alt="ox">
-                    </a>
-                </div>
                 <a href="https://www.trendyol.com/">
                     <h2>eousva - Məhsul Brendinqi</h2>
                 </a>
             </div>
-            <div class="five-five">
+            </div>
+            <div class="portfolio-tree-group">
+                <div class="five-five">
                 <a href="https://www.threads.net/">
                     <h2>Sosial Media</h2>
                 </a>
@@ -133,6 +138,8 @@
                     <h2>Məhsul - Dizayn</h2>
                 </a>
             </div>
+            </div>
+        </div>
         </section>
         <section class="six">
             <div class="six-one">
@@ -215,7 +222,7 @@
                 </ul>
             </div>
             <div>
-                <h3>Language</h3>
+                <h3>Dil</h3>
                 <select name="language" id="language" onchange="changeLanguage(this)"> 
                     <option value="az"> Az </option>
                     <option value="en"> En </option> 

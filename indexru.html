@@ -12,6 +12,7 @@
 <body>
     <header>
         <img class="logo" src="./imgs/headerlogo.svg" alt="логотип">
+        <div class="header-ul">
         <ul>
             <li class="menu"><a class="yellow" href=#home>Главная</a></li>
             <li class="menu"><a href=#pages>Страницы</a></li>
@@ -19,7 +20,15 @@
             <li class="menu"><a href=#blogs>Блоги</a></li>
             <li class="menu"><a href=#contact>Контакт</a></li>
         </ul>
+        </div>
+        <img class="burger" src="./imgs/burger-bar.png" alt="burger-bar">
         <a class="signin" href="./Public/signinru.html"><img src="./imgs/voyti.svg" alt="Войти"></a>
+        <div class="signout-div">
+            <div id="welcomeMessage"></div>
+           <div id="signout">
+               <button class="signout-btn">Выйти</button>
+           </div>
+       </div>
     </header>
     <main>
         <section class="home" id="home">
@@ -107,13 +116,10 @@
             <div class="five-img">
                 <img src="./imgs/projects.svg" alt="проекты">
             </div>
-            <div class="five-one">
-                <div class="arrow-one">
-                    <a
-                        href="https://www.lookfantastic.com/c/health-beauty/make-up/?srsltid=AfmBOooXBlVNKEPmLSEWQ_wFlUUGfLxVF-SWAHp5BOjAwDJv3rKxGQu_"><img
-                            src="./imgs/arrow.svg" alt="arrow"></a>
-                </div>
-                <div>
+            <div>
+                <div class="portfolio-one-group">
+                    <div class="five-one">
+                        <div>
                     <a
                         href="https://www.lookfantastic.com/c/health-beauty/make-up/?srsltid=AfmBOooXBlVNKEPmLSEWQ_wFlUUGfLxVF-SWAHp5BOjAwDJv3rKxGQu_">
                         <h2>Веб Дизайн</h2>
@@ -129,21 +135,20 @@
                     <h2>UXUI - Графический Дизайн</h2>
                 </a>
             </div>
+        </div>
+        <div class="portfolio-two-group">
             <div class="five-tree">
                 <a href="https://site.pro/az/AI-Website-Builder/">
                     <h2>Веб Разработка</h2>
                 </a>
             </div>
             <div class="five-four">
-                <div class="arrow-two">
-                    <a href="https://www.trendyol.com/">
-                        <img src="./imgs/arrow.svg" alt="arrow">
-                    </a>
-                </div>
                 <a href="https://www.trendyol.com/">
                     <h2>eousva - Брендинг Продукта</h2>
                 </a>
             </div>
+        </div>
+        <div class="portfolio-tree-group">
             <div class="five-five">
                 <a href="https://www.threads.net/">
                     <h2>Социальные Сети</h2>
@@ -154,6 +159,8 @@
                     <h2>Дизайн Продукта</h2>
                 </a>
             </div>
+        </div>
+        </div>
         </section>
         <section class="six">
             <div class="six-one">

@@ -1,10 +1,10 @@
-const mysql = require('mysql2'); // MySQL modulunu tələb edin
+const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '1234', // Öz şifrənizi burada yazın
-  database: 'yekun_layihe' // Verilənlər bazasının adı
+  password: '1234',
+  database: 'yekun_layihe'
 });
 
 connection.connect((err) => {
@@ -15,4 +15,4 @@ connection.connect((err) => {
   console.log('Connected to MySQL as id ' + connection.threadId);
 });
 
-module.exports = connection; // Export edin ki, digər fayllar istifadə edə bilsin
+module.exports = connection;

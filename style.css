@@ -274,17 +274,6 @@ a {
 .five-six{
     background-image: url(imgs/product.svg);
 }
-/* Media queries */
-@media screen and (max-width: 900px) {
-    .five-one, .five-two, .five-tree, .five-four, .five-five, .five-six {
-        width: 100%;
-        height: auto;
-    }
-    .portfolio-one-group, .portfolio-two-group, .portfolio-two-group{
-        display: flex;
-        flex-direction: column;
-    }
-}
 .six-one img{
     margin-top: 4vw;
     margin-bottom: 4vw;
@@ -481,6 +470,9 @@ footer{
     padding-left: 6vw;
     margin-bottom: 5vw;
 }
+#scrollUp{
+    display: none;
+}
 @media screen and (min-width: 300px) and (max-width: 600px) {
     .burger{
         display: block;
@@ -498,4 +490,98 @@ footer{
         margin-left: 15vw;
     }
     
+}
+
+#welcomeMessage h1{
+    font-size: 1.5vw;
+}
+#signout {
+    display: none;
+}
+/*----------------------*/
+
+.signout-div {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+}
+
+#welcomeMessage {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#signout {
+    background-color: #181818;
+    display: none;
+    position: absolute;
+    top: 69px;
+    left: 0;
+    width: 100%;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    overflow: hidden;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/*---------------*/
+
+.signout-btn{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    background-color: #A6A001;
+    font-size: 1.5vw;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#signout.active {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    display: flex;
+    justify-content: center;
+    max-height: 200px;
+    opacity: 1;
+}
+
+.hidden {
+    max-height: 0;
+    opacity: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .five-one, .five-two, .five-tree, .five-four, .five-five, .five-six {
+        width: 100%;
+        height: auto;
+    }
+    .portfolio-one-group, .portfolio-two-group, .portfolio-tree-group{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .burger{
+        display: block;
+        width: 100px;
+    }
+    .portfolio-ul-div{
+        display: none;
+    }
+    .header-ul{
+        display: none;
+    }
+    .footer-main{
+        display: flex;
+        flex-direction: column;
+        margin-left: 15vw;
+    } 
 }
