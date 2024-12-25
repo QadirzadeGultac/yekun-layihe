@@ -97,31 +97,20 @@ const welcomeDiv = document.getElementById('welcomeMessage');
 const signout = document.getElementById("signout");
 const signin = document.querySelector('.signin');
 const signoutDiv = document.querySelector(".signout-div");
+const logout = document.querySelector(".logout");
 welcomeDiv.innerHTML = `<h1 style="color: #A6A001";>${userName}</h1>`;
 signoutDiv.style.display = "none"
 if (userName) {
   signin.style.display = "none";
   signoutDiv.style.display = 'flex';
+  logout.style.display = 'flex';
 } else {
   const signin = document.querySelector('.signin');
 }
-const signoutButton = document.querySelector("#signout button");
-signoutButton.addEventListener("click", () => {
+logout.addEventListener("click", () => {
 localStorage.removeItem('userName');
-window.location.href = './index.html';
+location.reload();
   signin.style.display = "flex";
   signout.style.display = "none";
   welcomeDiv.style.display = "none";
 })
-
-////////////////////
-welcomeDiv.addEventListener('click', function () {
-  const signoutDiv = document.getElementById('signout');
-  if (signoutDiv.classList.contains('hidden')) {
-      signoutDiv.classList.remove('hidden');
-      signoutDiv.classList.add('active');
-  } else {
-      signoutDiv.classList.add('hidden');
-      signoutDiv.classList.remove('active');
-  }
-});

@@ -105,19 +105,20 @@ main{
 }
 
 .third h3{
+    font-size: 25px;
     margin-bottom: 2vw;
     color: #fff;
 }
 .third p{
-    
+    font-size: 25px;
     margin-bottom: 2vw;
     color: #ACACAC;
 }
 .third-one{
     border-radius: 15px;
     padding: 2vw;
-    width: 20vw;
-    height: 45vh;
+    width: 25vw;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     margin: 1vw;
@@ -138,9 +139,9 @@ main{
 .portofolio-img{
     display: flex;
     justify-content: center;
-    width: 15vw;
+    width: 20vw;
     margin-top: 2vw;
-    margin-bottom: 2vw;
+    margin-bottom: 3vw;
 }
 .portfolio {
     display: flex;
@@ -148,36 +149,6 @@ main{
     justify-content: center;
     align-items: center;
 }
-.portfolio-ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-}
-.portfolio li{
-    margin-left: 0.8vw ;
-    margin-right: 3vw;
-    color: #fff;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding-left: 0.8vw;
-    padding-right: 0.8vw;
-    border-radius: 10px;
-    
-}
-.portfolio-li{
-    color: #1E1E1E;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    background-color: #A6A001;
-    margin-left: 2vw ;
-}
-.portfolio li:hover{
-    color: #1E1E1E;
-    background-color: #A6A001;
-}
-
 .portfolio-one{
     display: flex;
     align-items: center;
@@ -238,6 +209,7 @@ a {
 }
 
 .five h2 {
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -245,6 +217,9 @@ a {
     margin-bottom: 1.5vw;
     width: 15vw;
     color: #fff;
+}
+.five-one h2{
+    width: 25vw;
 }
 
 .five p {
@@ -348,6 +323,7 @@ a {
 .agency, .budget{
     margin-right: 1vw;
 }
+
 .blogs-img{
     display: flex;
     justify-content: center;
@@ -443,8 +419,11 @@ footer{
 .dis-none{
     display: none;
 }
-.burger{
+.burger-div{
     display: none;
+}
+.aboutme{
+    cursor: pointer;
 }
 .aboutme-p{
     text-align: center;
@@ -473,25 +452,6 @@ footer{
 #scrollUp{
     display: none;
 }
-@media screen and (min-width: 300px) and (max-width: 600px) {
-    .burger{
-        display: block;
-        width: 100px;
-    }
-    .portfolio-ul-div{
-        display: none;
-    }
-    .header-ul{
-        display: none;
-    }
-    .footer-main{
-        display: flex;
-        flex-direction: column;
-        margin-left: 15vw;
-    }
-    
-}
-
 #welcomeMessage h1{
     font-size: 1.5vw;
 }
@@ -499,7 +459,11 @@ footer{
     display: none;
 }
 /*----------------------*/
-
+#pages{
+    display: flex;
+    /* justify-content: space-around; */
+    flex-direction: row;
+}
 .signout-div {
     display: flex;
     justify-content: center;
@@ -510,78 +474,272 @@ footer{
 #welcomeMessage {
     display: flex;
     align-items: center;
-    cursor: pointer;
     color: white;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
 }
 
-#signout {
-    background-color: #181818;
-    display: none;
-    position: absolute;
-    top: 69px;
-    left: 0;
-    width: 100%;
-    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-    overflow: hidden;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
 /*---------------*/
-
-.signout-btn{
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    background-color: #A6A001;
-    font-size: 1.5vw;
-    color: #fff;
-    border: none;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-#signout.active {
-    padding-top: 1vw;
-    padding-bottom: 1vw;
-    display: flex;
-    justify-content: center;
-    max-height: 200px;
-    opacity: 1;
-}
 
 .hidden {
     max-height: 0;
     opacity: 0;
 }
 
-@media screen and (max-width: 900px) {
+.logout{
+    cursor: pointer;
+    margin-left: 15px;
+    display: none;
+    align-items: center;
+}
+.logout img{
+    width: 1.5vw;
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .footer-main{
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+    }
+    #contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo{
+        width: 20vw;
+    }
+    .signin img{
+        width: 15vw;
+    }
+    .footer-one img{
+        width: 50vw;
+    }
+    .phone img{
+        width: 5vw;
+    }
+    .e-mail img{
+        width: 5vw;
+    }
+    .footer-main h3{
+        margin-left: 0;
+    }
+    .footer-one{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-one p{
+        width: 50vw;
+    }
     .five-one, .five-two, .five-tree, .five-four, .five-five, .five-six {
-        width: 100%;
-        height: auto;
+        width: 55vw;
+        height: 50vh;
     }
     .portfolio-one-group, .portfolio-two-group, .portfolio-tree-group{
         display: flex;
         flex-direction: column;
     }
-}
-@media screen and (min-width: 300px) and (max-width: 600px) {
-    .burger{
-        display: block;
-        width: 100px;
+    #pages{
+        display: flex;
+        flex-direction: column;
     }
-    .portfolio-ul-div{
-        display: none;
+    .third-one{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+        height: 40vh;
+    }
+    .third-one p, h3{
+        margin-left: 5vw;
+        width: 50vw;
+    }
+    .third-one img{
+        margin-left: 3vw;
+        width: 15vw;
+    }
+    .blogs-two{
+        display: flex;
+        flex-direction: column;
+    }
+    .blogs-two img{
+        width: 35vw;
+    }
+    .agency{
+        margin-left: 2vw;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2vw;
+    }
+    .agency, .budget{
+        margin-right: 0;
+    }
+    .budget{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2vw;
+
+    }
+    .help{
+        display: flex;
+        flex-direction: row;
+    }
+    .blogs h3 {
+        width: 50vw;
+    }
+    .blogs p{
+        width: 50vw;
+        margin-left: 5vw;
+    }
+    .burger{
+        width: 7vw;
+        height: 7vh;
+    }
+    .burger-div{
+        display: flex;
+        align-items: center;
     }
     .header-ul{
         display: none;
     }
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
     .footer-main{
+        width: 80vw;
         display: flex;
         flex-direction: column;
-        margin-left: 15vw;
-    } 
+    }
+    #contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo{
+        width: 25vw;
+    }
+    .blogs-two img{
+        width: 60vw;
+    }
+    .blogs h3{
+        font-size: 3vw;
+    }
+    .blogs p{
+        font-size: 2vw;
+    }
+    #contact p{
+        font-size: 3vw;
+    }
+    #contact h3{
+        font-size: 4vw;
+    }
+    #language{
+        font-size: 4vw;
+        width: 50vw;
+    }
+    .signin img{
+        width: 15vw;
+    }
+    .footer-one img{
+        width: 50vw;
+    }
+    .phone img{
+        width: 5vw;
+    }
+    .e-mail img{
+        width: 5vw;
+    }
+    .footer-main h3{
+        margin-left: 0;
+    }
+    .footer-one{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-one p{
+        width: 50vw;
+    }
+    .five-one, .five-two, .five-tree, .five-four, .five-five, .five-six {
+        width: 55vw;
+        height: 50vh;
+    }
+    .portfolio-one-group, .portfolio-two-group, .portfolio-tree-group{
+        display: flex;
+        flex-direction: column;
+    }
+    #pages{
+        display: flex;
+        flex-direction: column;
+    }
+    .third-one{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+        height: 40vh;
+    }
+    .third-one p, h3{
+        font-size: 15px;
+        margin-left: 5vw;
+        width: 50vw;
+    }
+    .third-one img{
+        margin-left: 3vw;
+        width: 18vw;
+    }
+    .blogs-two{
+        display: flex;
+        flex-direction: column;
+    }
+    .five h2 {
+        font-size: 20px;
+    }
+    .blogs-two img{
+        width: 35vw;
+    }
+    .agency{
+        margin-left: 2vw;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2vw;
+    }
+    .agency, .budget{
+        margin-right: 0;
+    }
+    .budget{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2vw;
+
+    }
+    .help{
+        display: flex;
+        flex-direction: row;
+    }
+    .blogs h3 {
+        width: 50vw;
+    }
+    .blogs p{
+        width: 50vw;
+        margin-left: 5vw;
+    }
+    .burger{
+        width: 10vw;
+    }
+    .burger-div{
+        display: flex;
+        align-items: center;
+    }
+    .header-ul{
+        display: none;
+    }
+    .blogs-img img{
+        width: 30vw;
+    }
+    .six-one img{
+        width: 33vw;
+    }
+    .portofolio-img{
+        width: 40vw;
+    }
 }

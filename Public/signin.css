@@ -93,3 +93,13 @@ a{
 a:hover{
     text-decoration: underline;
 }
+input[type="password"] {
+    padding-left: 3px;
+    font-family: 'password-font', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px; /* Lazım olduqda aralıq */
+}
+input:focus{
+    outline: none;
+}
+
