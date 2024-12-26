@@ -32,7 +32,7 @@ app.post('/signup', (req, res) => {
     }
   });
 });
-app.post('/signin', (req, res) => {
+app.post('/index', (req, res) => {
   const { email, password } = req.body;
   const query = 'SELECT Name FROM UsersNew WHERE Email = ? AND Password = ?';
   connection.query(query, [email, password], (err, results) => {
