@@ -39,11 +39,8 @@ function changeLanguage(selectElement) {
     window.location.href = './index.html';
   }
 }
-
-
 //////    Scrol hadisesi
 const scrollUpButton = document.getElementById("scrollUp");
-
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
     scrollUpButton.style.display = "block";
@@ -51,16 +48,12 @@ window.addEventListener("scroll", () => {
     scrollUpButton.style.display = "none";
   }
 });
-
 scrollUpButton.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
   });
 });
-
-
-
 //header
 const sections = document.querySelectorAll("section[id]");
 const observer = new IntersectionObserver(
@@ -80,17 +73,13 @@ const observer = new IntersectionObserver(
   }
 );
 sections.forEach((section) => observer.observe(section));
-
 //about me display block
 const aboutme = document.querySelector(".aboutme");
 const aboutmeText = document.querySelector(".aboutme-text")
 aboutme.addEventListener("click", () => {
   aboutmeText.classList.toggle("dis-none");
 })
-
-
 /////
-
 // İstifadəçi adını localStorage-dan almaq ucun
 const userName = localStorage.getItem('userName');
 const welcomeDiv = document.getElementById('welcomeMessage');
@@ -114,3 +103,10 @@ location.reload();
   signout.style.display = "none";
   welcomeDiv.style.display = "none";
 })
+
+////
+// Burger menyuya klik funksiyası əlavə edirik
+document.querySelector('.burger').addEventListener('click', function () {
+  const menu = document.querySelector('.header-ul ul');
+  menu.classList.toggle('active')
+});

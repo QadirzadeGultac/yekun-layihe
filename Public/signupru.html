@@ -29,6 +29,10 @@
             <p>Пароль: </p>
             <input type="password" id="password">
           </div>
+          <div class="show-password">
+            <p>Показать парол</p>
+      <input class="check" type="checkbox" onChange={handleCheck} />
+          </div>
           <div class="btn">
             <button onclick="signUp()">Зарегистрироваться</button>
           </div>
@@ -40,6 +44,16 @@
     </section>
   </main>
   <script>
+        const check = document.querySelector(".check");
+      check.addEventListener("change", () =>{
+        const password = document.getElementById('password');
+        if(password.type === "password"){
+          password.type = "text";
+        }
+        else{
+          password.type = "password";
+        }
+      })
     function signUp() {
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
@@ -68,6 +82,7 @@
     }
 
   </script>
+  <script src="../index.js"></script>
 </body>
 
 </html>

@@ -16,7 +16,7 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
-  width: 100%;
+  width: 100vw;
   padding: 20px;
   }
 section{
@@ -24,64 +24,62 @@ section{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
 }
 p{
-    font-size: 1.3vw;
+    font-size: 20px;
     color: #A6A001;
-    margin-bottom: 0.5vw ;
+    margin-right: 10px;
+    margin-bottom: 10px ;
 }
 .sign-up-main{
     text-align: start;
-    width: 21vw;
     display: grid;
     grid-template-columns: 0.5fr 1.5fr;
 }
 .sign-up{
-    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 530px;
+    height: 500px;
     background-color: #1E1E1E;
     border: 2px solid #1E1E1E;
     border-radius: 10px;
 }
 .sign-up-main input{
-    width: 15vw;
-    margin-bottom: 0.5vw;
+    width: 300px;
+    margin-bottom: 10px;
+    padding-left: 3px;
 }
-/* .show-password{
-    width: 15vw;
-    margin-top: 0.8vw;
+.btn{
     display: flex;
-    gap: 5px;
+    justify-content: center;
 }
-.show-password input{
-    margin-left: 1vw;
-    margin-bottom: 0.5vw;
-    width: 1vw;
-} */
 .btn button{
     background-color: #A6A001;
     color: white;
     border-radius: 5px;
     border: none;
     font-weight: 600;
-    padding: 0.8vw 1.5vw;
-    margin-top: 1vw;
-    font-size: 1vw;
+    padding: 10px 20px;
+    margin-top: 8px;
+    font-size: 18px;
 }
 .sign-up-one{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 30vw;
 }
 .img img{
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-    width: 10vw;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 180px;
 }
 .signin{
-    margin-top: 1vw;
     margin-bottom: 2vw;
+    margin-top: 1vw;
 }
 a{
     text-decoration:none;
@@ -89,4 +87,136 @@ a{
 }
 a:hover{
     text-decoration: underline;
+}
+input[type="password"] {
+    font-family: 'password-font', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+input:focus{
+    outline: none;
+}
+input[type="checkbox"]{
+    width: 18px;
+    margin-bottom: 10px;
+}
+.show-password{
+    width: 300px;
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+    display: flex;
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .sign-up{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 400px;
+        height: 550px;
+        background-color: #1E1E1E;
+        border: 2px solid #1E1E1E;
+        border-radius: 10px;
+    }
+    .sign-up-main p{
+        width: 280px;
+    }
+    .sign-up-main{
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .img img{
+        margin-top: 20px;
+        margin-bottom: 15px;
+        width: 120px;
+    }
+    .sign-up-main input {
+        width: 300px;
+        height: 25px;
+    }
+    .sign-up-one{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    p {
+        font-size: 25px;
+        width: 350px;
+        color: #A6A001;
+        margin-right: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    video{
+        display: none;
+    }
+    body{
+        background: #1E1E1E;
+    }
+    .content{
+        padding: 0;
+        position: static;
+        background: #1E1E1E;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sign-up {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        background-color: #1E1E1E;
+        border: 2px solid #1E1E1E;
+        border-radius: 10px;
+    }
+    #contact{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 500px;
+        border-radius: 10px;
+    }
+    .sign-up-main p{
+        width: 280px;
+    }
+    .sign-up-main{
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .img img{
+        margin-top: 20px;
+        margin-bottom: 15px;
+        width: 120px;
+    }
+    .sign-up-main input {
+        width: 250px;
+        height: 22px;
+    }
+    .sign-up-one{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    p {
+        font-size: 25px;
+        width: 280px;
+        color: #A6A001;
+        margin-right: 0;
+        text-align: center;
+    }
+    .show-password {
+        width: 250px;
+    }
+    .btn{
+        margin-bottom: 7px;
+    }
 }

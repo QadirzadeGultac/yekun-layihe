@@ -511,10 +511,20 @@ footer{
         width: 20vw;
     }
     .signin img{
-        width: 15vw;
+        width: 13vw;
+    }
+    .main-arrow{
+        position: fixed;
+    right: 15px;
+    bottom: 30px;
+    height: 80px;
+    width: 60px;
+    }
+    .main-arrow img{
+        width: 5vw;
     }
     .footer-one img{
-        width: 50vw;
+        width: 30vw;
     }
     .phone img{
         width: 5vw;
@@ -528,6 +538,7 @@ footer{
     .footer-one{
         display: flex;
         flex-direction: column;
+        column-gap: 5px;
     }
     .footer-one p{
         width: 50vw;
@@ -535,10 +546,12 @@ footer{
     .five-one, .five-two, .five-tree, .five-four, .five-five, .five-six {
         width: 55vw;
         height: 50vh;
+        margin-bottom: 2vw;
     }
     .portfolio-one-group, .portfolio-two-group, .portfolio-tree-group{
         display: flex;
         flex-direction: column;
+        gap: 2vw;
     }
     #pages{
         display: flex;
@@ -600,8 +613,35 @@ footer{
         display: flex;
         align-items: center;
     }
-    .header-ul{
-        display: none;
+   
+    .header-ul ul {
+        display: none; /* Əvvəlcə menyu gizlidir */
+        position: absolute;
+        top: 80px; /* Burger menyunun altına yerləşir */
+        left: 0;
+        width: 100%;
+        background-color: #1E1E1E;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    .header-ul ul.active {
+        display: flex; /* Burger klik edildikdə görünür */
+    }
+    .header-ul ul li a {
+        font-size: 20px;
+    }
+    .burger-div {
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .burger {
+        width: 30px;
+        height: 30px;
     }
 }
 @media screen and (min-width: 300px) and (max-width: 600px) {
@@ -632,16 +672,23 @@ footer{
     }
     #contact h3{
         font-size: 4vw;
+        margin-top: 10px;
+    }
+    .third-two{
+        display: none;
+    }
+    .five-img{
+        display: none;
     }
     #language{
         font-size: 4vw;
-        width: 50vw;
+        width: 10vw;
     }
     .signin img{
         width: 15vw;
     }
     .footer-one img{
-        width: 50vw;
+        width: 30vw;
     }
     .phone img{
         width: 5vw;
@@ -662,6 +709,7 @@ footer{
     .five-one, .five-two, .five-tree, .five-four, .five-five, .five-six {
         width: 55vw;
         height: 50vh;
+        margin-bottom: 2vw;
     }
     .portfolio-one-group, .portfolio-two-group, .portfolio-tree-group{
         display: flex;
@@ -676,7 +724,7 @@ footer{
         display: flex;
         flex-direction: row;
         width: 80vw;
-        height: 40vh;
+        height: 30vh;
     }
     .third-one p, h3{
         font-size: 15px;
@@ -730,9 +778,7 @@ footer{
         display: flex;
         align-items: center;
     }
-    .header-ul{
-        display: none;
-    }
+    
     .blogs-img img{
         width: 30vw;
     }
@@ -741,5 +787,45 @@ footer{
     }
     .portofolio-img{
         width: 40vw;
+    }
+    .main-arrow{
+        position: fixed;
+    right: 10px;
+    bottom: 30px;
+    height: 80px;
+    width: 50px;
+    }
+    .main-arrow img{
+        width: 7vw;
+    }
+
+    .header-ul ul {
+        display: none; /* Əvvəlcə menyu gizlidir */
+        position: absolute;
+        top: 80px; /* Burger menyunun altına yerləşir */
+        left: 0;
+        width: 100%;
+        background-color: #1E1E1E;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+    .header-ul ul li a {
+        font-size: 20px;
+    }
+    .header-ul ul.active {
+        display: flex; /* Burger klik edildikdə görünür */
+    }
+
+    .burger-div {
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .burger {
+        width: 30px;
+        height: 30px;
     }
 }
